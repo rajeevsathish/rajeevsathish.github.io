@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Virtual Keyboard Language Layouts</title>
+
+	<!-- demo -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/demo.css" rel="stylesheet">
+
+	<!-- jQuery & jQuery UI + theme (required) -->
+	<link href="css/jquery-ui.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<script src="js/jquery-latest-slim.min.js"></script>
+	<script src="js/jquery-ui-custom.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- keyboard widget css & script (required) -->
+	<link href="css/keyboard.css" rel="stylesheet">
+	<link href="css/keyboard-previewkeyset.css" rel="stylesheet">
+	<script src="js/jquery.keyboard.js"></script>
+
+	<!-- keyboard extensions (optional) -->
+	<script src="js/jquery.mousewheel.js"></script>
+	<script src="js/jquery.keyboard.extension-typing.js"></script>
+	<script src="js/jquery.keyboard.extension-previewkeyset.js"></script>
+
+	<!-- preloaded keyboard layout -->
+	<script src="js/keyboard-layouts-greywyvern.js" charset="utf-8"></script>
+	<script src="js/hindisplit.js" charset="utf-8"></script>
+	<script src="js/lodash.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="./data/en.js"></script>
+	<script type="text/javascript" src="./data/kn.js"></script>
+	<script type="text/javascript" src="./data/hi.js"></script>
+
+	<script src="js/nativeLangHangman.js" charset="utf-8"></script>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Hangman</h1>
+			</div>
+			<div class="col-md-offset-5 col-md-2 p-b-5">
+				<label for="chooseLanguage">Choose Language</label>
+				<select class="form-control" id="lang">
+				</select>
+			</div>
+			<div class="col-md-8 border-white-r" style="height: 600px;">
+				<div id="page-wrap">
+					<div class="block2">
+						<div class="main-box">
+							<div id="question-box">
+								<!-- Question -->
+								<h2 id='question'></h2>
+								<br />
+							</div>
+							<!-- Dash to accept character -->
+							<div id="hold">
+								<ul id='my-word'></ul>
+							</div>
+							<!-- Hint button -->
+							<div><button class="btn btn-primary" onclick="showHint()">Hint</button></div>
+						</div>
+						<input id="multi" type="text" />
+						<br />
+					</div>
+					<br class="clear" />
+				</div>
+			</div>
+			<div class="col-md-4 text-center">
+				<h3 id='mylives'>
+					</h4>
+					<canvas id="stickman">This Text will show if the Browser does NOT support HTML5 Canvas tag</canvas>
+			</div>
+		</div>
+
+	</div>
+	<div class="modal fade" id="myModal" role="dialog" data-backdrop="static" data-keyboard="false">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-body">
+					<p>congratulations !</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal"
+						onclick="goToNextQuestion()">ok</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</body>
+
+</html>

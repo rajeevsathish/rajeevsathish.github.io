@@ -1,0 +1,48 @@
+#my-word {
+  margin: 0;
+  display: block;
+  padding: 0;
+  display: block;
+}
+
+#my-word li {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 32px;
+}
+.rtl {
+  text-align: right;
+}
+.border-white-r {
+  border-right: 1px solid #FFFFFF;
+}
+.p-b-5 {
+  padding-bottom: 5em;
+}
+#question-box {
+  height: 180px;
+  line-height: 10em;
+  padding-bottom: 1em;
+}
+#question {
+  line-height: 1.5em;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  font-weight: bold;
+}
+#hold {
+  padding: 1em 0;
+}
+#multi {
+  opacity: 0;
+}
+.main-box {
+  height: 320px;
+}
+#stickman {
+  padding: 3em;;
+}
